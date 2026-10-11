@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Management System</title>
+
+    <!-- ==============================================
+        EXTERNAL CSS
+        ============================================== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ==============================================
+        INTERNAL CSS
+        ============================================== -->
+    <style>
+        .today {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+        }
+
+        .today h2 {
+            color: #856404;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ==============================================
+        HEADER
+        ============================================== -->
+
+    <header>
+
+        <h1>Client Management System</h1>
+
+        <p>
+            Organize your clients. Track your projects. Grow your business.
+        </p>
+
+    </header>
+
+    <main>
+
+        <!-- ==============================================
+            TODAY'S FOCUS
+            ============================================== -->
+
+        <section class="today">
+
+            <h2>Today's Focus</h2>
+
+            <p>
+                Follow up with 2 clients and send 1 project proposal.
+            </p>
+
+        </section>
+
+        <!-- ==============================================
+            SERVICES
+            ============================================== -->
+
+        <section class="services">
+
+            <h2>Services We Offer</h2>
+
+            <div class="service">
+                <h3>Web Design</h3>
+                <p>
+                    Responsive and modern websites for businesses.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>SEO</h3>
+                <p>
+                    Keyword research, on-page SEO and ranking improvement.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Digital Marketing</h3>
+                <p>
+                    Google Ads, social media and content marketing.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- ==============================================
+            CLIENT LIST TABLE
+            ============================================== -->
+
+        <section class="clients">
+
+            <h2>Client List</h2>
+
+            <table>
+
+                <!-- Table heading -->
+                <tr>
+                    <th>ID</th>
+                    <th>Client Name</th>
+                    <th>Service</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>C001</td>
+                    <td>Alex Tan</td>
+                    <td>Web Design</td>
+                    <td>Active</td>
+                </tr>
+
+                <tr>
+                    <td>C002</td>
+                    <td>Sarah Murphy</td>
+                    <td>SEO</td>
+                    <td>Pending</td>
+                </tr>
+
+                <tr>
+                    <td>C003</td>
+                    <td>David Lee</td>
+                    <td>Digital Marketing</td>
+                    <td>Completed</td>
+                </tr>
+
+                <!-- Colspan -->
+                <tr>
+                    <td colspan="4">
+                        Total Clients: 3
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- ==============================================
+            PROJECT SCHEDULE TABLE (ROWSPAN + COLSPAN)
+            ============================================== -->
+
+        <section class="schedule">
+
+            <h2>Weekly Meeting Schedule</h2>
+
+            <table>
+
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Client</th>
+                    <th>Purpose</th>
+                </tr>
+
+                <!-- Monday -->
+                <tr>
+                    <td rowspan="2">Monday</td>
+                    <td>10:00 AM</td>
+                    <td>Alex Tan</td>
+                    <td>Design Review</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>Sarah Murphy</td>
+                    <td>SEO Report</td>
+                </tr>
+
+                <!-- Wednesday -->
+                <tr>
+                    <td>Wednesday</td>
+                    <td>11:00 AM</td>
+                    <td>David Lee</td>
+                    <td>Project Handover</td>
+                </tr>
+
+                <!-- Colspan -->
+                <tr>
+                    <td colspan="4">
+                        Friday - Admin and Invoice Day
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- ==============================================
+            CLIENT INFORMATION CHECKLIST - UL
+            ============================================== -->
+
+        <section class="materials">
+
+            <h2>Client Information to Collect</h2>
+
+            <p>Details needed for every new client:</p>
+
+            <ul>
+                <li>Full Name and Company</li>
+                <li>Email and Phone Number</li>
+                <li>Country and Address</li>
+                <li>Service Required</li>
+                <li>Project Budget</li>
+            </ul>
+
+        </section>
+
+        <!-- ==============================================
+            CLIENT WORKFLOW - OL
+            ============================================== -->
+
+        <section class="steps">
+
+            <h2>Client Workflow</h2>
+
+            <p>Steps I follow for every client:</p>
+
+            <ol>
+                <li>Receive client enquiry</li>
+                <li>Discuss requirements</li>
+                <li>Send proposal and quotation</li>
+                <li>Start and complete the project</li>
+                <li>Send invoice and collect feedback</li>
+            </ol>
+
+        </section>
+
+        <!-- ==============================================
+            MOTIVATION
+            ============================================== -->
+
+        <section class="motivation">
+
+            <h2>Business Motto</h2>
+
+            <!-- INLINE CSS -->
+
+            <p style="color: green; font-weight: bold;">
+                Happy clients bring more clients!
+            </p>
+
+        </section>
+
+        <!-- ==============================================
+            ADD CLIENT FORM
+            ============================================== -->
+
+        <section class="client-form">
+
+            <h2>Add New Client</h2>
+
+            <form id="clientForm">
+
+                <!-- Name -->
+                <label for="name">
+                    Client Name:
+                </label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter client name"
+                >
+
+                <!-- Company -->
+                <label for="company">
+                    Company Name:
+                </label>
+                <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Enter company name"
+                >
+
+                <!-- Email -->
+                <label for="email">
+                    Email:
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter client email"
+                >
+
+                <!-- Phone -->
+                <label for="phone">
+                    Phone Number:
+                </label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter phone number"
+                >
+
+                <!-- Country -->
+                <label for="country">
+                    Country:
+                </label>
+                <select id="country" name="country">
+                    <option value="singapore">Singapore</option>
+                    <option value="ireland">Ireland</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="usa">USA</option>
+                    <option value="australia">Australia</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <!-- Service -->
+                <label for="service">
+                    Service Required:
+                </label>
+                <select id="service" name="service">
+                    <option value="web-design">Web Design</option>
+                    <option value="seo">SEO</option>
+                    <option value="marketing">Digital Marketing</option>
+                </select>
+
+                <!-- Start Date -->
+                <label for="date">
+                    Project Start Date:
+                </label>
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                >
+
+                <!-- Meeting Time -->
+                <label for="time">Meeting Time:</label>
+                <input
+                    type="time"
+                    id="time"
+                    name="time"
+                >
+
+                <!-- Budget -->
+                <label for="budget">
+                    Budget (USD):
+                </label>
+                <input
+                    type="number"
+                    id="budget"
+                    name="budget"
+                    placeholder="Enter budget"
+                >
+
+                <!-- Client Type -->
+                <p>Client Type:</p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="client-type"
+                        value="new"
+                    >
+                    New Client
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="client-type"
+                        value="returning"
+                    >
+                    Returning Client
+                </label>
+
+                <!-- Contact Method -->
+                <p>Preferred Contact Method:</p>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="contact"
+                        value="email"
+                    >
+                    Email
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="contact"
+                        value="phone"
+                    >
+                    Phone
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="contact"
+                        value="whatsapp"
+                    >
+                    WhatsApp
+                </label>
+
+                <!-- Notes -->
+                <label for="notes">
+                    Project Notes:
+                </label>
+                <textarea
+                    id="notes"
+                    name="notes"
+                    rows="4"
+                    placeholder="Write project details or requirements..."
+                ></textarea>
+
+                <!-- Submit -->
+                <button type="submit">
+                    Save Client
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- ==============================================
+        FOOTER
+        ============================================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Client Management System
+        </p>
+
+    </footer>
+
+<script>
+    document.getElementById("clientForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Stops the page from refreshing
+        alert("Client saved successfully!");
+    });
+</script>
+
+</body>
+
+</html>
